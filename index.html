@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>좌석 예매하기</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <header>
+    <div class="nav-bar">
+      <a href="#">
+        <img src="./images/Shape 6.png" alt="mai-sain">
+      </a>
+    </div>
+  </header>
+  <section>
+    <button class="icon">
+      <img src="./images/mai_icon.webp" alt="mai_icon">
+      <h3>콘서트 예매하기</h3>
+    </button>
+    <div class="app">
+      <h1>좌석 예매</h1>        
+      <div class="person-selection">
+        <button class="input-button">인원수 선택 ></button>
+        <div class="input-box">
+          <div class="input-container">
+            <div class="input-group">
+              <label for="adultCount">성인 (10,000원/인)</label>
+              <input type="number" id="adultCount" value="0" min="0">
+            </div>
+            <div class="input-group">
+              <label for="youthCount">청소년 (8,000원/인)</label>
+              <input type="number" id="youthCount" value="0" min="0">
+            </div>
+          </div>
+          <div class="total-people">
+            총 인원: <span id="totalPeople">0</span>명
+          </div>
+        </div>
+      </div>
+  
+      <div class="seat-selection">
+        <h2>좌석 선택</h2>
+        <div class="seats-container" id="seatsContainer"><!--  좌석 -->
+        </div>
+      </div>
+      <div class="summary">
+        <p class="seat-count">
+          선택한 좌석 수: <span class="seat-count-number" id="selectedCount">0</span>개
+        </p>
+        <p class="total-price">
+          총 결제 금액: <span id="totalPrice">0</span>원
+        </p>
+        <button class="complete-button" id="completeButton" disabled>예약 완료</button>
+      </div>
+      <div class="confirmation" id="confirmation" style="display: none;">
+        <h2>예약이 완료되었습니다.</h2>
+        <p class="seats">
+          선택한 좌석 번호: <strong id="finalSeats"></strong>
+        </p>
+        <p class="final-price">
+          최종 결제 금액: <strong id="finalPrice"></strong>원
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
